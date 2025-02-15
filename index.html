@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Izma Daudiya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+  <body class="box-border">
+    <div class="dark:bg-stone-900">
+      <header
+        class="flex justify-center items-center pt-10 text-stone-500 font-medium shadow-md shadow-stone-300/50 fixed top-0 left-0 w-full z-50 bg-white dark:bg-stone-900"
+      >
+        <div class="mx-10">
+          <a href="#"><h4 class="text-2xl cursor-pointer hover:text-stone-700">Izma.</h4></a>
+        </div>
+        <nav class="flex justify-between mx-auto items-center">
+          <ul
+            class="hidden text-2xl justify-around space-x-10 cursor-pointer sm:hidden lg:flex"
+          >
+            <li class="hover:text-stone-700"><a href="#home">Home</a></li>
+            <li class="hover:text-stone-700"><a href="#about">About</a></li>
+            <li class="hover:text-stone-700">
+              <a href="#projects">Projects</a>
+            </li>
+          </ul>
+          <i
+            class="fa-solid fa-bars cursor-pointer hover:text-stone-800 text-stone-500 text-3xl lg:hidden"
+            id="menu-icon"
+          ></i>
+        </nav>
+        <div class="text-3xl mx-10">
+          <ion-icon
+            name="moon-outline"
+            class="cursor-pointer hover:text-stone-800"
+            id="night"
+          ></ion-icon>
+          <ion-icon
+            name="sunny-outline"
+            class="hidden cursor-pointer hover:text-stone-400"
+            id="day"
+          ></ion-icon>
+        </div>
+      </header>
+      <!-- Sidebar -->
+      <div
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+        id="sidebar"
+      >
+        <div
+          class="fixed top-0 left-0 w-64 h-full bg-white shadow-md p-4 dark:bg-stone-900"
+        >
+          <div class="flex justify-between items-center mb-4">
+            <h4
+              class="text-2xl cursor-pointer text-stone-500 font-bold hover:text-stone-700 izmaLogo"
+            >
+              Izma.
+            </h4>
+            <i
+              class="fa-solid fa-times cursor-pointer text-stone-500 text-2xl"
+              id="close-sidebar"
+            ></i>
+          </div>
+          <ul class="text-xl space-y-4">
+            <li
+              class="text-stone-500 font-bold hover:text-stone-700 sidebarLinks"
+            >
+              <a href="#home">Home</a>
+            </li>
+            <li
+              class="text-stone-500 font-bold hover:text-stone-700 sidebarLinks"
+            >
+              <a href="#about">About</a>
+            </li>
+            <li
+              class="text-stone-500 font-bold hover:text-stone-700 sidebarLinks"
+            >
+              <a href="#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="dark:bg-stone-900">
+        <!-- Home -->
+        <div
+          class="h-screen flex flex-col justify-center items-start px-2 md:px-10"
+          id="home"
+        >
+          <h2 class="font-bold text-4xl ml-10 md:text-6xl lg:text-9xl">
+            <span id="text" class="text-stone-500"></span>
+          </h2>
+          <div class="flex flex-row items-center justify-center">
+            <a href="" class="bg-black text-stone-500 p-3 md:p-5 text-xl ml-10 md:text-2xl lg:text-4xl rounded-xl mt-5 md:mt-10 hover:bg-stone-500 hover:text-black font-bold">Download CV</a>
+            <a
+              href="mailto:daudiyaizma@gmail.com"
+              class="border-2 border-stone-500 text-stone-500 p-2 md:p-3 text-base ml-10 md:text-sm lg:text-xl rounded-xl mt-6 md:mt-10 hover:text-black flex items-center space-x-2 align-middle font-bold hover:bg-gradient-to-r from-stone-500 to-stone-600"
+              ><i class="fa-solid fa-envelope"></i> <span>Say hi!</span></a
+            >
+          </div>
+        </div>
+        <!-- About -->
+        <div id="about" class="h-90 flex flex-col md:ml-10 p-4 mb-20">
+          <h4 class="text-stone-500 text-2xl font-bold pt-20">/about me</h4>
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div>
+              <p
+                class="font-medium text-xl mt-10 text-stone-600 break-keep tracking-wide"
+              >
+                I am currently pursuing BCA from
+                <span class="text-stone-700 text-2xl">Gujarat University</span>.
+                At the same time, I am an Intern at
+                <span class="text-stone-700 text-2xl">Info Labz</span>. I'm a
+                passionate Web Developer with experience of creating dynamic and
+                responsive websites. My journey into web development began in
+                college where I discovered my love for coding and problem
+                solving. I've worked on variety of MERN and Django Projects.
+              </p>
+              <div
+                class="font-medium text-xl mt-10 text-stone-600 break-keep tracking-wide"
+              >
+                <p>Here are some technologies I have been working with:</p>
+                <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-5">
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>HTML & CSS</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>JavaScript ES6+</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>React</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>Node.js</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>Express</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>MongoDB</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>Python</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-play text-xs text-stone-500"></i
+                    ><span>Django</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center space-x-4 mt-10 text-5xl">
+                <a
+                  href="https://github.com/Izma-Daudiya"
+                  target="_blank"
+                  class="border-2 border-stone-500 p-2 rounded-2xl bg-transparent hover:bg-gradient-to-r from-stone-200 to-stone-200 shadow-xl shadow-stone-500/50 inset-shadow-2xs inset-shadow-stone-500"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/izma-daudiya-246a992aa"
+                  target="_blank"
+                  class="border-2 border-stone-500 p-2 rounded-2xl bg-transparent hover:bg-gradient-to-r from-stone-200 to-stone-200 shadow-xl shadow-stone-500/50 inset-shadow-2xs inset-shadow-stone-500"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a
+                  href="malito:daudiyaizma@gmail.com"
+                  target="_blank"
+                  class="border-2 border-stone-500 p-2 rounded-2xl bg-transparent hover:bg-gradient-to-r from-stone-200 to-stone-200 shadow-xl shadow-stone-500/50 inset-shadow-2xs inset-shadow-stone-500"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+            <img
+              src="izma.jpg"
+              alt="photo"
+              class="h-80 w-64 rounded-xl mr-10 md:hidden sm:hidden lg:block xl:block 2xl:block hidden"
+            />
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div
+          id="projects"
+          class="h-90 flex-col justify-center space-y-20 pt-20 mt-20"
+        >
+          <h4 class="ml-10 text-stone-500 text-2xl font-bold pt-10">
+            /pet projects
+          </h4>
+          <div class="flex flex-wrap items-center justify-center">
+            <div
+              class="flex flex-col w-full sm:w-80 bg-stone-500 rounded-xl p-4 m-4 sm:m-20 hover:bg-stone-400"
+            >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-folder text-3xl"></i>
+                <div>
+                  <a
+                    href="https://github.com/Izma-Daudiya/PasswordGenerator-React"
+                    target="_blank"
+                    ><i class="fa-brands fa-github text-xl"></i
+                  ></a>
+                  <a
+                    href="https://izmapasswordgenerator-react.netlify.app/"
+                    target="_blank"
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-xl"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <h4 class="text-2xl font-bold my-5">Password Generator App</h4>
+              <div class="text-xl font-semibold m-2">
+                <p>
+                  A React Password Generator creates secure passwords based on
+                  user preferences, with copy-to-clipboard functionality for
+                  convenience.
+                </p>
+              </div>
+              <div class="text-xl mt-4">React.js</div>
+            </div>
+            <div
+              class="flex flex-col w-full sm:w-80 bg-stone-500 rounded-xl p-4 m-4 sm:m-20 hover:bg-stone-400"
+            >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-folder text-3xl"></i>
+                <div>
+                  <a
+                    href="https://github.com/Izma-Daudiya/WeatherApp"
+                    target="_blank"
+                    ><i class="fa-brands fa-github text-xl"></i
+                  ></a>
+                  <a
+                    href="https://izma-daudiya.github.io/WeatherApp/"
+                    target="_blank"
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-xl"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <h4 class="text-2xl font-bold my-5">Weather App</h4>
+              <div class="text-xl font-semibold m-2">
+                <p>
+                  A JavaScript Weather App fetches real-time data, displaying
+                  current conditions and forecasts based on user-inputted
+                  locations.
+                </p>
+              </div>
+              <div class="text-xl mt-4">JavaScript, HTML, CSS</div>
+            </div>
+            <div
+              class="flex flex-col w-full sm:w-80 bg-stone-500 rounded-xl p-4 m-4 sm:m-20 hover:bg-stone-400"
+            >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-folder text-3xl"></i>
+                <div>
+                  <a
+                    href="https://github.com/Izma-Daudiya/QuickSignatureApp"
+                    target="_blank"
+                    ><i class="fa-brands fa-github text-xl"></i
+                  ></a>
+                  <a
+                    href="https://izma-daudiya.github.io/QuickSignatureApp/"
+                    target="_blank"
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-xl"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <h4 class="text-2xl font-bold my-5">Quick Signature App</h4>
+              <div class="text-xl font-semibold m-2">
+                <p>
+                  The Quick Signature App is a lightweight web application that
+                  allows users to create, save, and share digital signatures
+                  effortlessly.
+                </p>
+              </div>
+              <div class="text-xl mt-4">JavaScript, HTML, CSS</div>
+            </div>
+            <div
+              class="flex flex-col w-full sm:w-80 bg-stone-500 rounded-xl p-4 m-4 sm:m-20 hover:bg-stone-400"
+            >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-folder text-3xl"></i>
+                <div>
+                  <a
+                    href="https://github.com/Izma-Daudiya/Typing-Speed-Game"
+                    target="_blank"
+                    ><i class="fa-brands fa-github text-xl"></i
+                  ></a>
+                  <a
+                    href="https://izma-daudiya.github.io/Typing-Speed-Game/"
+                    target="_blank"
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-xl"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <h4 class="text-2xl font-bold my-5">Typing Speed Game</h4>
+              <div class="text-xl font-semibold m-2">
+                <p>
+                  A JavaScript-based typing speed game that tests accuracy and
+                  speed with real-time scoring, timers, and dynamic sentences
+                  challenges
+                </p>
+              </div>
+              <div class="text-xl mt-4">JavaScript, HTML, CSS</div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="align-middle text-center text-stone-500 font-medium mt-10 dark:bg-stone-900"
+      >
+        <p>Build and designed by Izma Daudiya</p>
+        <p>All rights reserved. &copy;</p>
+      </footer>
+    </div>
+    <script>
+      let typingEffect = new Typed("#text", {
+        // strings: ["Coder", "Developer", "MERN Stack"],
+        strings: ["hi, izma here."],
+        // loop:true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+      });
+
+      // sidebar
+      const menuIcon = document.getElementById("menu-icon");
+      const sidebar = document.getElementById("sidebar");
+      const closeSidebar = document.getElementById("close-sidebar");
+      const sidebarLinks = document.querySelectorAll(".sidebarLinks");
+      const izmaLogo = document.querySelector(".izmaLogo");
+
+      menuIcon.addEventListener("click", () => {
+        sidebar.classList.remove("hidden");
+      });
+
+      closeSidebar.addEventListener("click", () => {
+        sidebar.classList.add("hidden");
+      });
+
+      sidebar.addEventListener("click", (e) => {
+        if (e.target.id === "sidebar") {
+          sidebar.classList.add("hidden");
+        }
+      });
+
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+        });
+      });
+
+      izmaLogo.addEventListener("click", () => {
+        sidebar.classList.add("hidden");
+      });
+      // Dark Mode Toggle Logic
+      const night = document.getElementById("night");
+      const day = document.getElementById("day");
+      const body = document.body;
+
+      // Function to enable dark mode
+      const enableDarkMode = () => {
+        body.classList.add("dark");
+        night.classList.add("hidden");
+        day.classList.remove("hidden");
+        localStorage.setItem("theme", "dark");
+      };
+
+      // Function to disable dark mode
+      const disableDarkMode = () => {
+        body.classList.remove("dark");
+        night.classList.remove("hidden");
+        day.classList.add("hidden");
+        localStorage.setItem("theme", "light");
+      };
+
+      // Toggle dark mode on button click
+      night.addEventListener("click", () => {
+        enableDarkMode();
+      });
+
+      day.addEventListener("click", () => {
+        disableDarkMode();
+      });
+
+      // Check localStorage for theme preference on page load
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        enableDarkMode();
+      } else {
+        disableDarkMode();
+      }
+    </script>
+  </body>
+</html>
